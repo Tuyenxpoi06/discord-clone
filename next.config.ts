@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  images: {
+    domains: ["uploadthing.com", "utfs.io"], // 👈 thêm utfs.io vào đây
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "utfs.io",
+        pathname: "/**",
+      },
+    ],
+  },
 };
-
+module.exports = nextConfig;
 export default nextConfig;
